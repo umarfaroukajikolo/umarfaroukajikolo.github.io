@@ -1,0 +1,543 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balansulin - Natural Blood Sugar Control</title>
+    <title>Balansulin - Control Natural del Azúcar en Sangre</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #2ecc71;
+            --danger-color: #f04438;
+            --light-color: #f4f7f9;
+            --text-color: #555;
+            --font-family: 'Poppins', sans-serif;
+            --box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        } * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: var(--font-family);
+        line-height: 1.6;
+        color: var(--text-color);
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        min-height: 100vh;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    /* Header */
+    header {
+        background: white;
+        padding: 15px 0;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        box-shadow: var(--box-shadow);
+    }
+
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: var(--primary-color);
+    }
+
+    .header-cta {
+        background: var(--danger-color);
+        color: white;
+        padding: 12px 25px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+
+    .header-cta:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(240, 68, 56, 0.3);
+    }
+
+    /* Hero Section */
+    .hero {
+        background: linear-gradient(135deg, #eef7f3 0%, #d5f4e6 100%);
+        padding: 80px 20px;
+    }
+
+    .hero-content {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    .hero-text {
+        flex: 1;
+        text-align: left;
+    }
+
+    .hero-text h1 {
+        font-size: 3.2rem;
+        color: var(--primary-color);
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 20px;
+    }
+
+    .hero-text .subtitle {
+        font-size: 1.3rem;
+        color: var(--text-color);
+        margin-bottom: 30px;
+    }
+
+    .hero-image {
+        flex: 1;
+        text-align: center;
+    }
+
+    .hero-image img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+
+    /* Benefits with checkmarks */
+    .benefits-hero {
+        list-style: none;
+        margin: 30px 0;
+    }
+
+    .benefits-hero li {
+        display: flex;
+        align-items: center;
+        margin: 15px 0;
+        font-size: 1.1rem;
+        color: var(--text-color);
+    }
+
+    .benefits-hero li::before {
+        content: '✓';
+        color: var(--accent-color);
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-right: 15px;
+        width: 25px;
+        text-align: center;
+    }
+
+    /* CTA Buttons */
+    .cta {
+        display: inline-block;
+        background: linear-gradient(135deg, var(--danger-color) 0%, #d63031 100%);
+        color: white;
+        text-decoration: none;
+        padding: 18px 35px;
+        border-radius: 50px;
+        font-weight: bold;
+        font-size: 1.2rem;
+        margin: 20px 0;
+        transition: all 0.3s ease;
+        box-shadow: 0 5px 15px rgba(240, 68, 56, 0.3);
+    }
+
+    .cta:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(240, 68, 56, 0.4);
+    }
+
+    .cta-large {
+        font-size: 1.3rem;
+        padding: 20px 40px;
+    }
+
+    /* Countdown Timer */
+    .countdown-section {
+        background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+        border: 2px solid #f39c12;
+        border-radius: 20px;
+        padding: 30px;
+        margin: 40px 0;
+        text-align: center;
+        box-shadow: 0 8px 25px rgba(243, 156, 18, 0.2);
+    }
+
+    .countdown-label {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: var(--primary-color);
+        margin-bottom: 15px;
+    }
+
+    .countdown-timer {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: var(--danger-color);
+        margin: 15px 0;
+        font-family: 'Courier New', monospace;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+        100% { transform: scale(1); }
+    }
+
+    /* Sections */
+    .section {
+        background: white;
+        border-radius: 20px;
+        padding: 60px 40px;
+        margin: 40px 0;
+        box-shadow: var(--box-shadow);
+        text-align: center;
+    }
+
+    .section-light {
+        background: var(--light-color);
+    }
+
+    .section h2 {
+        font-size: 2.5rem;
+        color: var(--primary-color);
+        margin-bottom: 20px;
+        font-weight: 700;
+    }
+
+    .section p {
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Testimonials */
+    .testimonials-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        margin: 40px 0;
+    }
+
+    .testimonial-item {
+        background: white;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: var(--box-shadow);
+        text-align: center;
+    }
+
+    .testimonial-item img {
+        width: 100%;
+        border-radius: 12px;
+        margin-bottom: 20px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .testimonial-item .reviewer {
+        font-weight: 600;
+        color: var(--secondary-color);
+        margin-bottom: 10px;
+    }
+
+    .testimonial-item .stars {
+        color: #ffd700;
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+    }
+
+    .testimonial-item blockquote {
+        font-style: italic;
+        font-size: 1.1rem;
+        color: var(--primary-color);
+        line-height: 1.6;
+    }
+
+    /* Social Proof */
+    .social-proof {
+        background: linear-gradient(135deg, #e8f5e8 0%, #f0f9f0 100%);
+        border-radius: 15px;
+        padding: 25px;
+        margin: 30px 0;
+        text-align: center;
+    }
+
+    .social-proof-stats {
+        display: flex;
+        justify-content: space-around;
+        margin: 20px 0;
+    }
+
+    .stat {
+        text-align: center;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+        font-weight: bold;
+        color: var(--accent-color);
+    }
+
+    .stat-label {
+        font-size: 0.9rem;
+        color: var(--text-color);
+    }
+
+    /* Guarantee Section */
+    .guarantee {
+        background: linear-gradient(135deg, var(--primary-color) 0%, #34495e 100%);
+        color: white;
+        padding: 60px 40px;
+        border-radius: 20px;
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    .guarantee h2 {
+        color: white;
+        margin-bottom: 20px;
+    }
+
+    .guarantee-badge {
+        background: var(--accent-color);
+        color: white;
+        padding: 10px 20px;
+        border-radius: 25px;
+        font-weight: bold;
+        display: inline-block;
+        margin: 20px 0;
+    }
+
+    /* Footer */
+    footer {
+        background: var(--primary-color);
+        color: white;
+        padding: 40px 0;
+        text-align: center;
+        margin-top: 60px;
+    }
+
+    .disclaimer {
+        font-size: 12px;
+        color: #ccc;
+        text-align: center;
+        font-style: italic;
+        margin: 20px 0;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .container {
+            padding: 15px;
+        }
+
+        .hero-content {
+            flex-direction: column;
+            text-align: center;
+            gap: 30px;
+        }
+
+        .hero-text h1 {
+            font-size: 2.2rem;
+        }
+
+        .testimonials-grid {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        .section {
+            padding: 40px 20px;
+        }
+
+        .countdown-timer {
+            font-size: 2rem;
+        }
+
+        .cta {
+            padding: 15px 25px;
+            font-size: 1.1rem;
+        }
+
+        .social-proof-stats {
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .header-content {
+            flex-direction: column;
+            gap: 15px;
+        }
+    }
+</style>
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Balansulin</div>
+                <a href="https://go1.nolvadex.top/offers.go?spaceid=11804652&subid=" class="header-cta" rel="nofollow noopener">¡Ordena Ahora!</a>
+            </div>
+        </div>
+    </header> <section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>¡Controla tu Azúcar en Sangre Naturalmente en 30 Días!</h1>
+                <p class="subtitle">Con Balansulin, una fórmula 100% natural para una vida saludable.</p>
+
+                <ul class="benefits-hero">
+                    <li>Mantiene niveles saludables de azúcar en sangre</li>
+                    <li>Ingredientes 100% naturales</li>
+                    <li>Aumenta la energía y el bienestar</li>
+                    <li>Apoya la salud general</li>
+                </ul>
+
+                <div class="countdown-section">
+                    <div class="countdown-label">⚡ La oferta termina en:</div>
+                    <div id="countdown" class="countdown-timer">29:59</div>
+                    <div style="font-size: 0.9rem; color: var(--text-color);">Descuento aplicado automáticamente</div>
+                </div>
+
+                <a href="https://go1.nolvadex.top/offers.go?spaceid=11804652&subid=" class="cta cta-large" rel="nofollow noopener">¡Ordena Ahora y Toma Control!</a>
+            </div>
+            <div class="hero-image">
+                <img src="assets/img/glucometer.jpeg" alt="Balansulin supplement bottle with glucometer">
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container">
+    <div class="social-proof">
+        <h3 style="color: var(--primary-color); margin-bottom: 20px;">Únete a Miles de Clientes Satisfechos</h3>
+        <div class="social-proof-stats">
+            <div class="stat">
+                <div class="stat-number">3,200+</div>
+                <div class="stat-label">Clientes este mes</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">98%</div>
+                <div class="stat-label">Satisfacción</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">30</div>
+                <div class="stat-label">Días de garantía</div>
+            </div>
+        </div>
+    </div>
+
+    <section class="section">
+        <h2>Recomendado por Profesionales</h2>
+        <img src="assets/img/injection.jpeg" alt="Doctor recommending Balansulin" style="width:100%; max-width:500px; border-radius:12px; margin:20px auto; display:block; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+        <p style="font-style:italic; color: var(--text-color); margin-bottom:30px; font-size: 1.2rem;">"Balansulin es un suplemento natural seguro que recomiendo a mis pacientes que luchan con niveles fluctuantes de azúcar en sangre."</p>
+        <a href="https://go1.nolvadex.top/offers.go?spaceid=11804652&subid=" class="cta" rel="nofollow noopener">Ver Cómo Funciona</a>
+    </section>
+
+    <section class="section section-light">
+        <h2>Por Qué Funciona</h2>
+        <p>Balansulin combina hierbas y minerales científicamente probados para ayudar a regular el azúcar en sangre, reducir los antojos y mejorar la sensibilidad a la insulina de forma natural.</p>
+        <img src="assets/img/doctor.jpeg" alt="Person using Balansulin in daily routine" style="width:100%; max-width:500px; border-radius:12px; margin:20px auto; display:block; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+        <p style="margin-bottom:30px;">Incorpora fácilmente Balansulin en tu rutina diaria para un mejor control del azúcar en sangre.</p>
+        <a href="https://go1.nolvadex.top/offers.go?spaceid=11804652&subid=" class="cta" rel="nofollow noopener">¡Quiero Balansulin Ahora!</a>
+    </section>
+
+    <section class="section">
+        <h2>Ve Los Resultados</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-item">
+                <img src="assets/img/female-before-after.jpeg" alt="Before and after results - Female transformation">
+                <div class="reviewer">María G.</div>
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <blockquote>"Mi energía ha vuelto y ya no me desplomo en las tardes. ¡Mi doctor incluso notó mejoras en mis niveles de azúcar!"</blockquote>
+            </div>
+            <div class="testimonial-item">
+                <img src="assets/img/female-do-dont.jpeg" alt="Do's and don'ts guide">
+                <div class="reviewer">Ana L.</div>
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <blockquote>"Después de 3 meses con Balansulin, me siento más saludable y mis niveles de azúcar están estables."</blockquote>
+            </div>
+        </div>
+        <p class="disclaimer">*Los resultados pueden variar por individuo. Consulta con un médico antes de comenzar cualquier suplemento.</p>
+    </section>
+
+    <section class="guarantee">
+        <h2>Tu Salud es Nuestra Prioridad. Ordena con Confianza.</h2>
+        <p>Estamos tan seguros del poder de Balansulin que ofrecemos una <strong>Garantía de Satisfacción del 100%</strong>. Si no estás completamente satisfecho con tus resultados, simplemente contáctanos para un reembolso completo, sin preguntas.</p>
+        <div class="guarantee-badge">✓ Garantía de 30 Días</div>
+        <br>
+        <a href="https://go1.nolvadex.top/offers.go?spaceid=11804652&subid=" class="cta cta-large" rel="nofollow noopener">¡Reclama tu Botella Ahora!</a>
+        <p style="margin-top: 20px; font-size: 1.1rem;">Stock limitado disponible. ¡Toma control de tu azúcar en sangre y energía hoy!</p>
+    </section>
+</div>
+
+<footer>
+    <div class="container">
+        <p style="margin-bottom: 15px; font-weight: 600; color: #ecf0f1;">El producto promocionado es un Suplemento Dietético</p>
+        <p style="margin-bottom: 15px; font-weight: 600; color: #ecf0f1;">El producto promocionado es un Suplemento Dietético</p>
+        <p>Copyright © 2024 Balansulin. Todos los Derechos Reservados.</p>
+    </div>
+</footer>
+
+<footer style="font-size:12px; color:gray; text-align:center; margin-top:20px;">
+    Disclaimer: This product is a dietary supplement, not a medicine.
+    It is not intended to diagnose, treat, cure, or prevent any disease.
+</footer>
+
+<script>
+    // Enhanced countdown timer
+    function updateCountdown() {
+        const countdownElement = document.getElementById('countdown');
+        let minutes = 29;
+        let seconds = 59;
+
+        const countdownInterval = setInterval(() => {
+            if (seconds === 0) {
+                if (minutes === 0) {
+                    clearInterval(countdownInterval);
+                    countdownElement.textContent = "Offer Expired!";
+                    return;
+                }
+                minutes--;
+                seconds = 59;
+            } else {
+                seconds--;
+            }
+
+            const formattedMinutes = minutes.toString().padStart(2, '0');
+            const formattedSeconds = seconds.toString().padStart(2, '0');
+            countdownElement.textContent = `${formattedMinutes}:${formattedSeconds}`;
+        }, 1000);
+    }
+
+    updateCountdown();
+</script>
+
+</body>
+</html>
